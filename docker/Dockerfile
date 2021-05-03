@@ -1,7 +1,9 @@
 FROM python:3.7
 
 RUN mkdir /app
-COPY docker/ pipeline/ /app/
+COPY model/ /app/
+COPY preprocessing/ /app/
+COPY utils/ /app/
 WORKDIR /app
-CMD ["python","model/model.py"]
+CMD ["python","model.py"]
 
